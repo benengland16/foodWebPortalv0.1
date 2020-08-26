@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{--{{dd(count($userList))}}--}}
+
+                    @foreach ($userList as $user)
+
+                        {{ $user->email }}
+
+                    @endforeach
+
                 </div>
             </div>
         </div>
