@@ -1,3 +1,4 @@
+<?php include(session()->get('routes_file_path')); ?>
 @extends('layouts.app')
 
 @section('content')

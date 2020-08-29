@@ -1,4 +1,5 @@
-@extends('layouts.app')
+<?php include(session()->get('routes_file_path')); ?>
+@extends('layouts.partials.app')
 
 @section('content')
 <div class="container">
