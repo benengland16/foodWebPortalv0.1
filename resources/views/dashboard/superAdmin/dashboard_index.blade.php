@@ -1,5 +1,5 @@
 <?php include(session()->get('routes_file_path')); ?>
-@extends('layouts.partials.app')
+@extends('layouts.superAdmin.top-nav-menu')
 
 @section('content')
 <div class="container">
@@ -15,13 +15,7 @@
                         </div>
                     @endif
 
-                    {{--{{dd(count($userList))}}--}}
-
-                    @foreach ($userList as $user)
-
-                        {{ $user->name }}
-
-                    @endforeach
+                    
 
                 </div>
             </div>

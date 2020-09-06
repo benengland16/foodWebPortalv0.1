@@ -25,11 +25,11 @@ class SessionHasAdmin
    
         else if(empty(session()->get('role_name'))){
 
-          return redirect('http://test.ontoto.com.au/logout');
+          return redirect('http://127.0.0.1/logout');
 
         }else {
 
-          return redirect('http://test.ontoto.com.au/logout');
+          return redirect('http://127.0.0.1/logout');
 
         }
 

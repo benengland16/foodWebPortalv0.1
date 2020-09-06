@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 
-class companies extends Model
+class company_recipes extends Model
 {
 
 	use SoftDeletes;
     protected $dates = ['deleted_at'];
-	protected $table = 'companies';
-	protected $fillable = [ 'name', 'description', 'email', 'phone', 'address', 'status', 'created_at' , 'created_by' , 'updated_at', 'updated_by', 'deleted_by'];
+	protected $table = 'company_recipes';
+	protected $fillable = [ 'recipe_id', 'company_id', 'status', 'created_at' , 'created_by' , 'updated_at', 'updated_by', 'deleted_by'];
 
     public static function boot(){
         parent::boot();
