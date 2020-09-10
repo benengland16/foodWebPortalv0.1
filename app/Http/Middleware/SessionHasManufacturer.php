@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class SessionHasUser
+class SessionHasManufacturer
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class SessionHasUser
     {
         
       
-        if(session()->get('role_name')==='User') {
+        if(session()->get('role_name')==='Manufacturer') {
             
             return $next($request);
 
@@ -25,15 +25,11 @@ class SessionHasUser
    
         else if(empty(session()->get('role_name'))){
 
-           //return redirect('http://test.ontoto.com.au/User/role-'.session()->get('role_name')."_role");
+          return redirect('http://127.0.0.1/logout');
 
-            return redirect('http://127.0.0.1/logout');
+        }else {
 
-        }
-
-        else {
-
-            return redirect('http://127.0.0.1:8000/logout');
+          return redirect('http://127.0.0.1/logout');
 
         }
         
