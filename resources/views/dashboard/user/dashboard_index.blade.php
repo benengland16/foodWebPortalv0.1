@@ -1,5 +1,5 @@
 <?php include(session()->get('routes_file_path')); ?>
-@extends('layouts.app')
+@extends('layouts.user.top-nav-menu')
 
 @section('content')
 <div class="container">

@@ -67,6 +67,7 @@ Route::get('/home', 'HomeController@index')->name('home');
                 
                 $role="admin";
                 Route::get('/dash-board','DashboardController@index')->name("$role.dashboard.index");
+                
 
                 
             });
@@ -86,10 +87,48 @@ Route::get('/home', 'HomeController@index')->name('home');
             Route::group(['prefix' => 'user', 'namespace' => 'User'], function() {
                 $role="user";
                 Route::get('/dash-board','DashboardController@index')->name("$role.dashboard.index");
+
+                Route::get('/recipe-index','RecipeController@index')->name("$role.recipe.index");
+                Route::post('/recipe-select','RecipeController@select')->name("$role.recipe.select");
+
             });
 
             Route::group(['prefix' => 'user', 'namespace' => 'Common'], function() {
                 $role="user";
+                include base_path().'/routes/common_routes.php';
+            });
+
+                
+        });
+
+
+
+        Route::middleware('SessionHasDistributor')->group(function () {
+           
+            Route::group(['prefix' => 'distributor', 'namespace' => 'Distributor'], function() {
+                $role="distributor";
+                Route::get('/dash-board','DashboardController@index')->name("$role.dashboard.index");
+            });
+
+            Route::group(['prefix' => 'distributor', 'namespace' => 'Common'], function() {
+                $role="distributor";
+                include base_path().'/routes/common_routes.php';
+            });
+
+                
+        });
+
+
+
+        Route::middleware('SessionHasManufacturer')->group(function () {
+           
+            Route::group(['prefix' => 'manufacturer', 'namespace' => 'Manufacturer'], function() {
+                $role="manufacturer";
+                Route::get('/dash-board','DashboardController@index')->name("$role.dashboard.index");
+            });
+
+            Route::group(['prefix' => 'manufacturer', 'namespace' => 'Common'], function() {
+                $role="manufacturer";
                 include base_path().'/routes/common_routes.php';
             });
 
