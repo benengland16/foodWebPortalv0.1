@@ -21,6 +21,8 @@
             
                     <button type="submit" class="btn btn-success btn-sm">Place Order</button>
 
+                    <a class="btn btn-danger" href="{{ route($routeClearCart) }}">Empty Cart</a>
+
                 </div>
 
                 <div class="card-body">

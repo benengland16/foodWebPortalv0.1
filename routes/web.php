@@ -93,6 +93,7 @@ Route::get('/home', 'HomeController@index')->name('home');
                 Route::post('/checkout','RecipeController@select')->name("$role.recipe.select");
                 Route::post('/order','CheckoutController@checkout')->name("$role.checkout.index");
                 Route::get('/cart','RecipeController@get')->name("$role.recipe.get");
+                Route::get('/clear-cart','RecipeController@clear_cart')->name("$role.recipe.clear_cart");
 
             });
 

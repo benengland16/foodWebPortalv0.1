@@ -10,5 +10,6 @@
 	$routeRecipeSelect=session()->get('route_name').".recipe.select";
 	$routeCartGet=session()->get('route_name').".recipe.get";
 	$routeCheckout=session()->get('route_name').".checkout.index";
+	$routeClearCart=session()->get('route_name').".recipe.clear_cart";
 
 ?>

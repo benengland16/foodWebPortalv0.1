@@ -84,9 +84,15 @@ class RecipeController extends Controller
 
 	}
 
-	public function store(Request $request){
+	public function clear_cart(){
 
+		session()->forget('cart');
 
+		//$userList = DB::Select('SELECT * FROM users');
+
+		//return view ('dashboard.user.dashboard_index')->with('userList',$userList);
+
+		return $this->index();
 
 	}
 
