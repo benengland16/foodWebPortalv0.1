@@ -92,6 +92,7 @@ Route::get('/home', 'HomeController@index')->name('home');
                 Route::get('/recipe-index','RecipeController@index')->name("$role.recipe.index");
                 Route::post('/checkout','RecipeController@select')->name("$role.recipe.select");
                 Route::post('/order','CheckoutController@checkout')->name("$role.checkout.index");
+                Route::get('/cart','RecipeController@get')->name("$role.recipe.get");
 
             });
 

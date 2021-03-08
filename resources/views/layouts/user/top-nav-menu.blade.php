@@ -49,6 +49,16 @@
 
                                 <a class="dropdown-item" href="{{ route($routeRecipeIndex) }}">Menu</a>
 
+                                @if(is_null(session('cart')))
+
+                                    
+
+                                @else
+
+                                    <a class="dropdown-item" href="{{ route($routeCartGet) }}">Cart</a>
+
+                                @endif
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">

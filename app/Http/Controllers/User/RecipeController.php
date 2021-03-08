@@ -76,9 +76,11 @@ class RecipeController extends Controller
 
 	}
 
-	public function create(){
+	public function get(){
 
+		$cart=session('cart');
 
+		return view('checkout.user.checkout_index')->with('data',$cart);
 
 	}
 
