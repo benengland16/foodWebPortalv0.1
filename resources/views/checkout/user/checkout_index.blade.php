@@ -6,7 +6,7 @@
 
     
         
-    <form id="recipe-select" method="POST" action="{{ route($routeRecipeSelect) }}">
+    <form id="checkout" method="POST" action="{{ route($routeCheckout) }}">
 
         <input type="hidden" name="_token" value="{{csrf_token()}}">
     
@@ -19,7 +19,7 @@
 
                 <div class="col 2">
             
-                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                    <button type="submit" class="btn btn-success btn-sm">Place Order</button>
 
                 </div>
 

@@ -26,7 +26,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
+                    <div class="card-header">{{ __('Login') }}
+
+                        <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
+
+                    </div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">

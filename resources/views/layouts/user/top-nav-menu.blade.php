@@ -47,7 +47,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="{{ route($routeRecipeIndex) }}">Recipes</a>
+                                <a class="dropdown-item" href="{{ route($routeRecipeIndex) }}">Menu</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

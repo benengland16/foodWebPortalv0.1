@@ -13,7 +13,7 @@ class company_recipes extends Model
 	use SoftDeletes;
     protected $dates = ['deleted_at'];
 	protected $table = 'company_recipes';
-	protected $fillable = [ 'recipe_id', 'company_id', 'status', 'created_at' , 'created_by' , 'updated_at', 'updated_by', 'deleted_by'];
+	protected $fillable = [ 'recipe_id', 'company_id', 'unit_price', 'units_per_ctn', 'status', 'created_at' , 'created_by' , 'updated_at', 'updated_by', 'deleted_by'];
 
     public static function boot(){
         parent::boot();

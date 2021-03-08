@@ -19,7 +19,7 @@ class RecipeController extends Controller
 		$companyId=session('company_id');
 		//dd(session());
 
-		$queryString="SELECT recipes.id, recipes.name, recipes.description, recipes.main_ingredient, recipes.minor_ingredient, recipes.price, recipes.is_special, recipes.status FROM recipes, company_recipes WHERE recipes.id = company_recipes.recipe_id and company_recipes.company_id = $companyId and company_recipes.deleted_at is NULL";
+		$queryString="SELECT recipes.id, recipes.name, recipes.description, company_recipes.unit_price, company_recipes.units_per_ctn, recipes.is_special, recipes.status FROM recipes, company_recipes WHERE recipes.id = company_recipes.recipe_id and company_recipes.company_id = $companyId and company_recipes.deleted_at is NULL";
 
 		$data=DB::Select($queryString);
 
@@ -35,10 +35,41 @@ class RecipeController extends Controller
 
 		$cart=$request->input('recipes');
 
-		foreach($cart as $item){
+		//dd($cart);
 
-			dd($item);
-			//echo $item."\n";
+		if(is_null($cart)){
+
+			return redirect()->back();
+
+		}else{
+
+			$companyId=session('company_id');
+			$checkout = array();
+
+			//dd($checkout);
+
+			foreach($cart as $item){
+
+				//dd($item);
+				//echo $item."\n";
+
+				$queryString="SELECT recipes.id, recipes.name, recipes.description, company_recipes.unit_price, company_recipes.units_per_ctn, recipes.is_special, recipes.status FROM recipes, company_recipes WHERE recipes.id = $item and company_recipes.recipe_id = $item and company_recipes.company_id = $companyId and company_recipes.deleted_at is NULL";
+
+				$data=DB::Select($queryString);
+
+				array_push($checkout, $data[0]);
+
+			}
+
+			//dd($checkout);
+
+			//dd(session());
+
+			session()->put('cart', $checkout);
+
+			//dd(session('cart'));
+
+			return view('checkout.user.checkout_index')->with('data',$checkout);
 
 		}
 

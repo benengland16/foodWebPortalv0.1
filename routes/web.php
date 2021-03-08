@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','Auth\LoginController@index')->name('login');
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
+Route::get('/register','Auth\RegisterController@index')->name('register');
 
 Auth::routes();
 
@@ -89,7 +90,8 @@ Route::get('/home', 'HomeController@index')->name('home');
                 Route::get('/dash-board','DashboardController@index')->name("$role.dashboard.index");
 
                 Route::get('/recipe-index','RecipeController@index')->name("$role.recipe.index");
-                Route::post('/recipe-select','RecipeController@select')->name("$role.recipe.select");
+                Route::post('/checkout','RecipeController@select')->name("$role.recipe.select");
+                Route::post('/order','CheckoutController@checkout')->name("$role.checkout.index");
 
             });
 
