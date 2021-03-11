@@ -33,17 +33,17 @@
 									<tr align="left" style="font-size: 14px;font-weight: normal;">
 
 										<th style="font-weight: normal"><span style="font-weight: bold">Name: </span>{{$menu->name}}</th>
-										<th style="font-weight: normal"><span style="font-weight: bold">ICCID: </span>{{$menu->description}}</th>
+										<th style="font-weight: normal"><span style="font-weight: bold">Desc: </span>{{$menu->description}}</th>
 										
 									</tr>
 
 									<tr align="left" style="font-size: 14px;font-weight: normal;">
 
-										<th style="font-weight: normal"><span style="font-weight: bold">Model: </span>{{$menu->unit_price}}</th>
+										<th style="font-weight: normal"><span style="font-weight: bold">Price Per Unit: </span>{{$menu->unit_price}}</th>
 
 										
 										
-										<th style="font-weight: normal"><span style="font-weight: bold">Usage: </span>{{$menu->id}}</th>
+										<th style="font-weight: normal"><span style="font-weight: bold">ID: </span>{{$menu->id}}</th>
 
 										
 

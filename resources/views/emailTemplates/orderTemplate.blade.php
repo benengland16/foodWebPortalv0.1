@@ -6,7 +6,7 @@
 	</div>
 
 	<div align="center" width="95%" style="padding-bottom: 20px">
-		<span style="font-size: 18px;font-weight: bold;font-family:Avenir,Helvetica,sans-serif;">Order for: {{date('F\,\\ Y')}}</span>
+		<span style="font-size: 18px;font-weight: bold;font-family:Avenir,Helvetica,sans-serif;">test</span>
 	</div>
 
 	
