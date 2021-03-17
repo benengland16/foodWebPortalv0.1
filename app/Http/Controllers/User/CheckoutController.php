@@ -29,7 +29,7 @@ class CheckoutController extends Controller
 
 		$html='';
 
-		$attachments['html']=null;
+		//$attachments['html']=null;
 
 		$newAttachment=view('emailTemplates.orderPDF')->with('cart',$cart);  
         $html .= $newAttachment->render();
