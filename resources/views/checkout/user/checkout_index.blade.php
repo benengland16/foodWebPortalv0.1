@@ -74,7 +74,7 @@
                                         <th scope="row">In Stock</th>
                                     @endif--}}
 
-                                    <th scope="row"><input type="checkbox" name="recipes[]" value="{{$recipe->id}}"/></th>
+                                    {{--<th scope="row"><input type="checkbox" name="recipes[]" value="{{$recipe->id}}"/></th>--}}
 
                                 </tr>
 

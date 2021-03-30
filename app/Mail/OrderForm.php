@@ -34,7 +34,7 @@ class OrderForm extends Mailable
     public function build()
     {
 
-        dd('here');
+        //dd('here');
         return $this->view('emailTemplates.orderTemplate')->subject("Order")->with(['viewDataArray' => $this->data]);
     }
 }

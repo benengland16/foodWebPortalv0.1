@@ -34,7 +34,7 @@ class OrderPDF extends Mailable
     public function build()
     {
 
-        dd('here');
+        //dd('here');
         //return $this->view('emailTemplates.orderPDF')->subject("Order")->with(['viewDataArray' => $this->data]);
         
         return $this->view('emailTemplates.orderPDF')->attachData($pdf->output(), session('user_name')." Order.pdf");
