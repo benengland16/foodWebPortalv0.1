@@ -41,7 +41,8 @@
                                 <th>Name</th>
                                 <th>Unit Price</th>
                                 <th>Units Per Ctn</th>
-                                <th>Assign</th>
+                                <th>Quantity</th>
+                                <th>Select</th>
 
                             </tr>
 
@@ -57,20 +58,9 @@
                                     <th scope="row">{{$recipe->name}}</th>
                                     <th scope="row">{{$recipe->unit_price}}</th>
                                     <th scope="row">{{$recipe->units_per_ctn}}</th>
-                                    <th scope="row">Select</th>
+
+                                    <th scope="row"><input type="text" name="quantity[]"/></th>
                                     
-
-                                    {{--@if($recipe->is_special != 1)
-                                        <th scope="row">Not on Special</th>
-                                    @else
-                                        <th scope="row">Is on Special</th>
-                                    @endif
-
-                                    @if($recipe->status != 1)
-                                        <th scope="row">Out of Stock</th>
-                                    @else
-                                        <th scope="row">In Stock</th>
-                                    @endif--}}
 
                                     <th scope="row"><input type="checkbox" name="recipes[]" value="{{$recipe->id}}"/></th>
 

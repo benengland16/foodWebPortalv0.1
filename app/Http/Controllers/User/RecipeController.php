@@ -31,11 +31,19 @@ class RecipeController extends Controller
 
 	public function select(Request $request){
 
-		//dd($request->input('recipes'));
+		//dd(array_filter($request->quantity));
+
+		dd($request->input());
 
 		$cart=$request->input('recipes');
 
-		//dd($cart);
+		//$quant=$request->input('quantity');
+
+
+
+		dd($request->quantity);
+
+		dd($cart);
 
 		if(is_null($cart)){
 
@@ -67,7 +75,7 @@ class RecipeController extends Controller
 
 			session()->put('cart', $checkout);
 
-			//dd(session('cart'));
+			dd(session('cart'));
 
 			return view('checkout.user.checkout_index')->with('data',$checkout);
 
@@ -75,6 +83,14 @@ class RecipeController extends Controller
 
 
 	}
+
+	/*public function quantFilter($var){
+
+		if(is_null($var) || $var == '0')
+
+
+
+	}*/
 
 	public function get(){
 
