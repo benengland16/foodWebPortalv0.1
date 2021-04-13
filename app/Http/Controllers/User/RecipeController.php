@@ -33,7 +33,7 @@ class RecipeController extends Controller
 
 		//dd(array_filter($request->quantity));
 
-		dd($request->input());
+		//dd($request->all());
 
 		$cart=$request->input('recipes');
 
@@ -41,9 +41,9 @@ class RecipeController extends Controller
 
 
 
-		dd($request->quantity);
+		//dd($request->quantity);
 
-		dd($cart);
+		//dd($cart);
 
 		if(is_null($cart)){
 
@@ -75,7 +75,7 @@ class RecipeController extends Controller
 
 			session()->put('cart', $checkout);
 
-			dd(session('cart'));
+			//dd(session('cart'));
 
 			return view('checkout.user.checkout_index')->with('data',$checkout);
 
@@ -108,7 +108,9 @@ class RecipeController extends Controller
 
 		//return view ('dashboard.user.dashboard_index')->with('userList',$userList);
 
-		return $this->index();
+		//return $this->index();
+
+		return redirect()->route('user.recipe.index');
 
 	}
 

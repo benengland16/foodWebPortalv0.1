@@ -7,9 +7,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\User\DashboardController;
+use App\Http\Controllers\User\RecipeController;
 use App\Mail\OrderForm;
 use Carbon\Carbon;
 use App\Models\recipes;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use PDF;
 
 class CheckoutController extends Controller
@@ -19,13 +22,41 @@ class CheckoutController extends Controller
     {
          //$this->middleware('auth');
          $this->dashboard = new DashboardController;  
+
         
     }
 
 	public function checkout(Request $request){
 	
-		//dd(session('cart'));
+        $quant=$request->quantity;
+
+        $q1=array_reverse($quant);
+
+        foreach($q1 as $check){
+
+            if(is_null($check) or $check < 0){
+
+                return redirect()->route('user.recipe.get');
+
+            }
+
+        }
+
 		$cart=session('cart');
+
+        foreach($cart as $item){
+
+            $newQuant=array_pop($q1);
+
+            $item->quantity=$newQuant;
+
+            //dd($item);
+
+            //dd($item->units_per_ctn * $item->unit_price);
+
+        }
+
+        //dd($cart);
 
 		$html='';
 
@@ -60,7 +91,9 @@ class CheckoutController extends Controller
         //Mail::send('emailTemplates.orderTemplate')->
 
         //return redirect()->back();
-		return $this->dashboard->index();
+		//return $this->dashboard->index();
+
+        return redirect()->route('user.dashboard.index');
 
 
 	}

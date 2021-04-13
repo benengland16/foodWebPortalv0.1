@@ -41,7 +41,7 @@
                                 <th>Name</th>
                                 <th>Unit Price</th>
                                 <th>Units Per Ctn</th>
-                                <th>Quantity</th>
+                                {{--<th>Quantity</th>--}}
                                 <th>Select</th>
 
                             </tr>
@@ -59,10 +59,14 @@
                                     <th scope="row">{{$recipe->unit_price}}</th>
                                     <th scope="row">{{$recipe->units_per_ctn}}</th>
 
-                                    <th scope="row"><input type="text" name="quantity[]"/></th>
+                                    {{--<th scope="row"><input type="number" name="quantity[]"/></th>--}}
                                     
 
-                                    <th scope="row"><input type="checkbox" name="recipes[]" value="{{$recipe->id}}"/></th>
+                                    <th scope="row"><input type="checkbox" id="selected" name="recipes[]" value="{{$recipe->id}}"/></th>
+
+      
+
+
 
                                 </tr>
 

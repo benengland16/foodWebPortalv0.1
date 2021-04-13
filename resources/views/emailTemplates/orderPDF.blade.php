@@ -43,7 +43,7 @@
 
 										
 										
-										<th style="font-weight: normal"><span style="font-weight: bold">ID: </span>{{$menu->id}}</th>
+										<th style="font-weight: normal"><span style="font-weight: bold">Quantity: </span>{{$menu->quantity}}</th>
 
 										
 
