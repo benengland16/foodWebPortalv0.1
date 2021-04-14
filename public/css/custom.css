@@ -1,0 +1,388 @@
+
+
+
+
+.body_1 {
+  
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.0;
+    color: #212529;
+    text-align: left;
+    background-color:black;
+    
+
+  
+}
+
+.body_2{
+
+
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.0;
+    color: #212529;
+    text-align: left;
+    background-color: #c5c5c5;
+    background:unset;
+    background-image:unset;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+
+
+
+}
+
+
+.body_3 {
+  
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.0;
+    color: #212529;
+    text-align: left;
+    background-color:white;
+   
+
+  
+}
+
+
+
+.navbar-default{
+
+  border-right: none !important;
+  border-left: none !important;
+  background-color: #7c93c3 !important;
+  color:white !important;
+
+
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+
+.navbar{
+
+  border-radius:0px !important;
+
+
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: black !important;
+  color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+   
+   color:white;
+}
+
+
+.button {
+    outline: 0;
+    padding: 5px 12px;
+    display: block;
+    color: #ececec;
+
+    border: 1px solid #8cc5ec;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #232B30; /* old browsers */
+    background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #232B30 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#232B30)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#232B30',GradientType=0 ); /* ie */
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */
+}
+
+
+
+
+
+
+ .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #3d5d6ef0;
+}
+
+.activityHeading{
+
+
+    background-color: #3d5d6e; 
+    color: white; 
+    border-bottom: 1px solid #8cc5ec; 
+    padding:10px;
+
+
+}
+
+
+.activityHeadingRedbackround{
+
+
+
+    background-color: #dc5151; 
+    color: white; 
+    border-bottom: 1px solid #8cc5ec; 
+    padding:10px;
+
+
+    
+}
+
+.breadcrumb-item > a{
+
+color: gray;
+
+
+}
+
+.breadcrumb-item > a:hover{
+
+color:#96b9fd;
+text-decoration:none;
+
+
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color: #7c93c3;
+    border-color: #7c93c3;
+ 
+}
+
+
+.btn-danger {
+    color: #fff;
+    background-color: #75000b;
+    border-color: #75000b;
+    
+}
+
+.btn-success{
+
+    
+
+}
+
+
+
+
+.table th, .table td {
+
+    padding: 0.50rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+
+
+}
+
+
+.shadow-1 {
+
+    
+
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+
+position:relative;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+
+
+}
+
+.editbox-heading-1 {
+
+
+background-color:white; margin-bottom: 10px;  
+padding: 10px ; border: 1px solid #dee2e6; 
+border-bottom:none; 
+background-color: #fffdf0;
+margin-bottom: 20px;
+
+
+
+
+}
+
+
+.infobox1 {
+
+
+background-color:white; margin-bottom: 10px;  
+padding: 10px ; border: 1px solid #ececec; 
+border-bottom:none; 
+background-color: #f7faff;
+margin-bottom: 20px;
+
+
+
+
+}
+
+.card-header{
+
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgb(222, 232, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-weight:bold;
+    color:#777777;
+
+    background-color: #5d6e90;
+
+    background: url(../img/bgr1.png);
+    background-image: url(../img/bgr1.png);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+
+
+}
+
+
+
+.card-body{
+
+background-color: #f6f6f6;
+
+
+}
+
+
+
+.container-fluid-card1{
+
+
+
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+
+position:relative;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+padding: 20px;
+
+}
+
+.breadcrumb {
+
+margin-top:10px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+border: 1px solid #333333;
+background-color: #99999929;
+
+
+
+}
+
+.highlighter1{
+
+color:#7c93c3;
+
+
+}
+
+
+
+
+.highlighter2{
+
+ color:green;
+ font-weight: bold;
+
+}
+
+
+.highlighter3{
+
+ color:#b1ff92;
+
+
+}
+
+
+
+.form-control{
+
+
+
+font-size:0.8rem;
+
+
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+
+    color: black
+
+
+}
+
+
+
+select.form-control:not([size]):not([multiple]) {
+
+height: calc(1.75rem );
+
+}
+
+.card2{
+
+
+border-bottom: 1px solid #616e88;
+padding: 10px; 
+margin-bottom:10px ; 
+margin-left: 2px;
+
+
+
+
+}
+
+.card3{
+
+
+border-bottom: 1px solid #616e88;
+padding: 10px; 
+padding-top:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+}
+
+
